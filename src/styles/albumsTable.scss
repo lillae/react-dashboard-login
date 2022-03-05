@@ -1,0 +1,61 @@
+@import './_variables.scss';
+
+
+#root > div > section > div > div > table {
+    background-color: $table-background-color;
+    color: $colorPrimary;
+    box-shadow: $shadowSecondary;
+    border-color: $accent;
+    font-size:1.6rem;
+    width:100%;
+    border-collapse: inherit;
+    text-transform:capitalize;
+    @media screen and (min-width:1024px) {
+    width:50vw;
+    }
+    
+}
+
+#root > div > section > div > div > table > thead > tr > th {
+    color: $colorPrimary;
+    box-shadow: $shadowSecondary;
+    border: $table-cell-border;
+}
+
+#root > div > section > div > div > table > tbody > tr {
+    cursor:pointer;
+    box-shadow: $shadowSecondary;
+    border-collapse:inherit;
+}
+
+#root > div > section > div > div > table > tbody > tr:hover {
+    background-color:$table-row-hover-background-color;
+    box-shadow: $shadowPrimary;
+    transition: all 0.5s ease;
+}
+
+
+
+#root > div > section > div > div > table > tbody > tr > th {
+    color: $colorPrimary; 
+    border: $table-cell-border;
+}
+
+#root > div > section > div > div > table > tbody > tr > td{
+    border: $table-cell-border;
+}
+
+#root > div > section > div > div > table > tbody > tr:hover th {
+    border: 1px solid $accent;
+    border-top: 1px solid $accent;
+    color: $accent;
+    transition: all 0.5s ease;
+}
+
+#root > div > section > div > div > table > tbody > tr:hover td {
+    border: 1px solid $accent;
+    border-top: 1px solid $accent;
+    color:$accent;
+    transition: all 0.5s ease;
+}
+

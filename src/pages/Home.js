@@ -1,9 +1,16 @@
 import React from 'react'
+import Albums from '../components/sections/Albums';
+import Nav from '../components/elements/Nav';
 
-const home = () => {
+
+const Home = () => {
   return (
-    <div>home</div>
+    <>
+      <Nav/>
+      <Albums/>
+    </>
+    
   )
 }
 
-export default home
+export default Home

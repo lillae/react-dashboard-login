@@ -1,11 +1,17 @@
-import './styles/sass/mystyles.scss';
-import Home from './pages/Home.js';
+import React from 'react';
+import Main from './pages/Main';
+import Login from './components/sections/Login';
+import { DashboardProvider} from './context/DashboardContext';
+import 'bulma';
 
 function App() {
+
   return (
-    <div className="App">
-      <Home/>
-    </div>
+    <DashboardProvider>
+      <div className='App'>
+        <Main/>
+      </div>
+    </DashboardProvider>
   );
 }
 

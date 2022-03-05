@@ -1,0 +1,59 @@
+@import './_variables.scss';
+
+
+.modal {
+    width:100vw;
+    height:100vh;
+    padding:2rem;
+    .modal-background {
+    background-color: $bgDark;
+    }
+    .modal-content {
+        background-color:#171e2e61;
+        border:1px solid #991bff;
+        border-radius: 10px;
+        box-shadow: $shadowPrimary;
+        padding: 2rem;
+        text-align:left;
+        color: $colorPrimary;
+    }
+ 
+    h2 {
+        font-size:3rem;
+        text-align:center;
+        font-weight:600;
+        width:100%;
+        border-bottom:1px solid $accent;
+        margin:0px auto 30px;
+        @media screen and (min-width:768px) {
+            width:50%;
+        }
+    }
+
+    strong {
+        color:$accent;
+        font-size:1.6rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .id-wrapper {
+        max-width:220px;
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        margin:0px auto 20px;
+        h3 {
+            font-size: 2.3rem;
+        }
+        strong {
+            font-size:1.9rem;
+        }
+    }
+    h3.album-title {
+        font-size:1.8rem;
+        text-transform:capitalize;
+        text-align:center;
+    }
+   
+}

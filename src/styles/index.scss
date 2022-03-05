@@ -1,0 +1,71 @@
+@import "./_variables.scss";
+@import "./login.scss";
+@import './nav.scss';
+@import "./album.scss";
+@import "./albumsTable.scss";
+@import './albumModal.scss';
+@import "~bulma/bulma.sass";
+
+/******** BASE STYLES **********/
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    width:100%;
+    height:100%;
+    background: $bg;
+    
+}
+
+h1.title {
+    color:$accentSecondary;
+    font-size:3.5rem;
+}
+
+#root > div > section > div > h1 {
+    color: $colorSecondary;
+    font-size: 2rem;
+    @media screen and (min-width:361px) {
+        font-size:2.5rem;
+    }
+    @media screen and (min-width:768px) {
+        font-size:3.5rem;
+    }
+}
+
+h1.subtitle {
+    font-family: $family-primary;
+    color: $accent;
+}
+
+h3 {
+    color: $colorPrimary;
+}
+
+section {
+    min-height:100vh;
+    font-family: $family-primary;
+}
+
+div.buttons > button {
+    font-family:$family-primary; 
+    font-size:1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
