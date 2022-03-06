@@ -17,7 +17,7 @@ const Nav = () => {
           <Navbar.Item>
             <FaUserCircle className='profile' onClick={() => setProfileOpen(true)}/>
           </Navbar.Item>
-          <Button size={1} className='logout' onClick={() => setCanLogin(false)}>Log out</Button>
+          <Button size={1} className='btn' onClick={() => setCanLogin(false)}>Log out</Button>
         </div>
       </Navbar>
   );

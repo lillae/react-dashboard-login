@@ -1,0 +1,107 @@
+@import './_variables.scss';
+
+#root > div > section {
+    background: $bg;
+    width:100%;
+    height:100%;
+}
+
+.profile-wrapper {
+    display:flex;
+    flex-direction:column;
+    align-items:space-evenly;
+}
+
+#root > div > section > div > div.container.banner{
+    background: linear-gradient(to right, #61045F, #AA076B);
+    width:100%;
+    height:30vh;
+    margin: 0px auto 50px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    padding: 0.5rem 0rem;
+    svg {
+        color: #eaeaea;
+        font-size:8rem;
+        margin-bottom: 20px;
+    }
+    h4 {
+        font-size:1.7rem;
+        color: #eaeaea;
+        font-family: $family-primary;
+    }
+  
+    @media screen and (min-width:1024px) {
+        width:60vw;
+        height:40vh;
+        padding: 0rem 0rem;
+    }
+    
+}
+
+#root > div > section > div > div:nth-child(2).profile-form-wrapper {
+    max-width:100%;
+    width:100%;
+    @media screen and (min-width: 1024px) {
+    max-width:60vw;
+    }
+}
+
+form.profile {
+    max-width:100%; 
+    padding: 0.5rem;
+    display:flex;
+    flex-direction:column;
+    label.label {
+        color: $accent;
+    }
+   
+}
+
+#root > div > section > div > div:nth-child(2) > form > fieldset{
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    margin-bottom:50px;
+    @media screen and (min-width:768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+
+#root > div > section > div > div:nth-child(2) > form > fieldset > div {
+    width:90%;
+    padding:1rem;
+    margin:0px auto;
+}
+
+#root > div > section > div > div:nth-child(2) > form > fieldset > div> div > input {
+    background-color: $bgInput;
+    color: $accent;
+    border-color:transparent;
+    text-transform:capitalize;
+    &::placeholder {
+        color: $colorPrimary;
+    }
+}
+
+button.back {
+    background-color: transparent;
+    border-color: $accentTernary;
+    color: $accent;
+    font-family: $family-primary;
+    text-transform:uppercase;
+    font-weight:400;
+    width:150px;
+    margin:0px auto;
+    &:hover {
+        box-shadow:$shadowPrimary;
+        border-color:$accent;
+        color:$accent;
+        transition: all 0.5s ease;
+    }
+}

@@ -2,12 +2,12 @@
 
 //Color Theme
 $bg: #0d121d;
-$bgInput:#0d1422;
+$bgInput:#101622;
 $bgDark: #0a0e17;
 $bgNav:#171e2ebf;
 $card: #152242;
 $accent: #cf00ff;
-$accentSecondary: #00e1e6e3;
+$accentSecondary:#ff00dd;
 $accentTernary: #4f0062e3;
 $transparent: transparent;
 $colorPrimary: #bebebe;
@@ -15,6 +15,7 @@ $colorSecondary: #4ccacd;
 $family-primary: 'Barlow Condensed', sans-serif;
 $shadowPrimary: 0 5px 28px #320f32, 0 5px 10px #671b6624;
 $shadowSecondary:  0 0px 10px #320f32, 0 0px 0px #671b6624;
+$shadowInset:  0 0px 10px #320f32 inset, 0 0px 0px #671b6624 inset;
 
 //Bulma Custom Colors
 $family-code: $family-primary;
@@ -25,7 +26,7 @@ $table-background-color: #171e2e61;
 $table-body-background-color: purple;
 $table-color: $colorPrimary;
 $table-row-hover-background-color: #cf00ff04;
-$table-cell-border: 1px solid $accentTernary;
+$table-cell-border: 1px solid  #4f00624a;
 
 
 $custom-colors: (

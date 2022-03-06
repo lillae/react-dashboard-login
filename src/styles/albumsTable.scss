@@ -4,9 +4,7 @@
 #root > div > section > div > div > table {
     background-color: $table-background-color;
     color: $colorPrimary;
-    box-shadow: $shadowSecondary;
-    border-color: $accent;
-    font-size:1.6rem;
+    font-size:1.3rem;
     width:100%;
     border-collapse: inherit;
     text-transform:capitalize;
@@ -17,15 +15,15 @@
 }
 
 #root > div > section > div > div > table > thead > tr > th {
-    color: $colorPrimary;
-    box-shadow: $shadowSecondary;
+    color: $accent;
     border: $table-cell-border;
+    font-weight:600;
 }
 
 #root > div > section > div > div > table > tbody > tr {
     cursor:pointer;
-    box-shadow: $shadowSecondary;
     border-collapse:inherit;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #root > div > section > div > div > table > tbody > tr:hover {
@@ -39,6 +37,7 @@
 #root > div > section > div > div > table > tbody > tr > th {
     color: $colorPrimary; 
     border: $table-cell-border;
+    font-weight: 400;
 }
 
 #root > div > section > div > div > table > tbody > tr > td{

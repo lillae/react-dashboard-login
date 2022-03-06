@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   Form,
   Icon,
@@ -13,17 +13,26 @@ import { BiUserCircle, BiLock } from 'react-icons/bi';
 
 const Login = () => {
   const { setUsername, username, setPassword, password, pwDefault, users, profile, setProfile, setCanLogin, canLogin, setUserAlbums, userAlbums, albums} = useDashboard();
+  const [alertPw, setAlertPw] = useState('');
+  const [alertUsername, setAlertUsername] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if(profile.username === username && password === pwDefault) {
       setCanLogin(true);
-    } else if (profile.length === 0) {
-      alert('Incorrect username')
-    } else if (profile.username === username && password !== pwDefault) {
-      alert('Incorrect password')
-    } else {
-      alert('Username and Password are incorrect');
+    }
+
+    if (profile.length === 0) {
+      setAlertUsername('Incorrect Username');
+    }
+    if (profile.username === username && password !== pwDefault) {
+      setAlertPw('Incorrect Password');
+    } 
+
+    if(profile.length === 0 && password !== pwDefault) {
+      setAlertUsername('Incorrect Username');
+      setAlertPw('Incorrect Password');
+      
     }
   }
 
@@ -41,7 +50,7 @@ const Login = () => {
   return (
     <Section className='is-centered login'>
       <Container className='login-wrapper'>
-        <Heading className='has-text-centered mb-6'>
+        <Heading className='has-text-centered mb-6 login-title'>
           Login to your Dashboard
         </Heading>
         <Columns className='is-centered'>
@@ -59,6 +68,7 @@ const Login = () => {
                   <BiUserCircle className='icons' />
                 </Icon>
               </Form.Control>
+              <Form.Help color="danger">{alertUsername}</Form.Help>
             </Form.Field>
             <Form.Field className='mb-5'>
               <Form.Label>Password</Form.Label>
@@ -74,6 +84,7 @@ const Login = () => {
                   <BiLock className='icons' />
                 </Icon>
               </Form.Control>
+              <Form.Help color="danger">{alertPw}</Form.Help>
             </Form.Field>
             <Button.Group>
               <Button fullwidth rounded color='accent' onClick={() => handleClick(username)} className='login'>

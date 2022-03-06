@@ -11,11 +11,12 @@
     .modal-content {
         background-color:#171e2e61;
         border:1px solid #991bff;
-        border-radius: 10px;
         box-shadow: $shadowPrimary;
-        padding: 2rem;
+        padding: 1rem 2rem;
         text-align:left;
         color: $colorPrimary;
+       
+        max-width:500px;
     }
  
     h2 {
@@ -32,28 +33,31 @@
 
     strong {
         color:$accent;
-        font-size:1.6rem;
-        font-weight: 400;
+        font-size:2rem;
+        font-weight: 600;
         text-transform: uppercase;
+        font-style:normal;
     }
 
     .id-wrapper {
-        max-width:220px;
         width:100%;
         display:flex;
         justify-content:space-between;
-        margin:0px auto 20px;
+        margin:0px auto 10px;
         h3 {
-            font-size: 2.3rem;
+            font-size: 1.5rem;
         }
         strong {
-            font-size:1.9rem;
+            font-size:1.5rem;
+            font-weight: 400;
         }
     }
     h3.album-title {
-        font-size:1.8rem;
+        font-size:2rem;
         text-transform:capitalize;
         text-align:center;
+        font-style:italic;
+        margin-bottom:20px;
     }
    
 }
