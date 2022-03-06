@@ -10,7 +10,7 @@ export function useDashboard() {
 export function DashboardProvider({ children }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [pwDefault, setPwDefault] = useState('1234');
+  const [pwDefault, setPwDefault] = useState('123456');
   const [canLogin, setCanLogin] = useState(false);
   const [users, setUsers] = useState([]);
   const [profile, setProfile] = useState([]);
