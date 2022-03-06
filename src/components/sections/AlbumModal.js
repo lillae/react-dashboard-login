@@ -11,8 +11,8 @@ const AlbumModal = () => {
       {card && 
           <div className='modal-content'>
             <div className='id-wrapper'>
-              <h3><strong>Id:</strong> {card.id}</h3>
-              <h3><strong>User Id:</strong> {card.userId}</h3>
+              <h3><strong>ID:</strong> {card.id}</h3>
+              <h3><strong>User ID:</strong> {card.userId}</h3>
             </div>
             <h3 className='album-title'>
               <strong>Title</strong> <br/> {card.title}
