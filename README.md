@@ -2,8 +2,8 @@
 
 ## Description: 
  - Created with React.js, Bulma and jsonplaceholder API. 
- - Login to view Albums belonging to specific users.
- - Username: Bret (or any user from the API) //  Password:1234
+ - Login to view Albums belonging to the logged in user.
+ - Username: Bret (or any user from the API) //  Password:123456
  
 ## Demo:
 https://confident-benz-d6af0f.netlify.app
