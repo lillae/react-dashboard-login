@@ -1,4 +1,4 @@
-# react-dashboard-login
+# react-login
 
 ## Description: 
  - Created with React.js, Bulma and jsonplaceholder API. 
