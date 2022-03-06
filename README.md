@@ -3,7 +3,7 @@
 ## Description: 
  - Created with React.js, Bulma and jsonplaceholder API. 
  - Login to view Albums and their details.
- - Username: Bret and Password:1234
+ - Username: Bret (or any user from the API) and Password:1234
  
 ## Demo:
 https://confident-benz-d6af0f.netlify.app
