@@ -6,7 +6,7 @@ import AlbumModal from './AlbumModal';
 import AlbumsTable from './AlbumsTable';
 
 const Albums = () => {
-  const { albums, setAlbums, isModal, card, setUserAlbums, userAlbums ,profile} = useDashboard();
+  const { setAlbums, card } = useDashboard();
 
   useEffect(() => {
     const fetchAlbums = async () => {
@@ -14,7 +14,7 @@ const Albums = () => {
         const res = await axios.get(
           'https://jsonplaceholder.typicode.com/albums'
         );
-        if(res) {
+        if (res) {
           setAlbums(res.data);
         }
         return res;
@@ -25,20 +25,16 @@ const Albums = () => {
     fetchAlbums();
   }, []);
 
-  
-
   return (
     <>
       <Section>
         <Container className='album-container'>
           <Heading>Albums</Heading>
           <Container>
-              <AlbumsTable/>
+            <AlbumsTable />
           </Container>
         </Container>
-            {card && 
-              <AlbumModal/>
-            }
+        {card && <AlbumModal />}
       </Section>
     </>
   );

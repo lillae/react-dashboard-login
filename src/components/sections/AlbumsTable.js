@@ -1,17 +1,16 @@
 import React from 'react';
-import { Section, Container, Table } from 'react-bulma-components';
+import { Table } from 'react-bulma-components';
 import { useDashboard } from '../../context/DashboardContext';
 
 const AlbumsTable = () => {
-  const { profile, albums, isModal, setIsModal, setCard, card } = useDashboard();
+  const { profile, albums, setIsModal, setCard } = useDashboard();
 
   const handleOpen = (id) => {
-    setCard(albums.find(x => x.id === id));
+    setCard(albums.find((x) => x.id === id));
     setIsModal(true);
- };
+  };
 
   return (
-
     <Table hoverable='true' bordered='true' size='fullwidth' className='table'>
       <thead>
         <tr>
@@ -33,7 +32,6 @@ const AlbumsTable = () => {
             ))}
       </tbody>
     </Table>
-  
   );
 };
 

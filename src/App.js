@@ -1,15 +1,13 @@
 import React from 'react';
 import Main from './pages/Main';
-import Login from './components/sections/Login';
-import { DashboardProvider} from './context/DashboardContext';
+import { DashboardProvider } from './context/DashboardContext';
 import 'bulma';
 
 function App() {
-
   return (
     <DashboardProvider>
       <div className='App'>
-        <Main/>
+        <Main />
       </div>
     </DashboardProvider>
   );

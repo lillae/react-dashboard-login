@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import {
   Form,
   Icon,
@@ -12,13 +12,24 @@ import { useDashboard } from '../../context/DashboardContext';
 import { BiUserCircle, BiLock } from 'react-icons/bi';
 
 const Login = () => {
-  const { setUsername, username, setPassword, password, pwDefault, users, profile, setProfile, setCanLogin, canLogin, setUserAlbums, userAlbums, albums} = useDashboard();
+  const {
+    username,
+    setUsername,
+    password,
+    setPassword,
+    pwDefault,
+    users,
+    profile,
+    setProfile,
+    setCanLogin,
+  } = useDashboard();
+
   const [alertPw, setAlertPw] = useState('');
   const [alertUsername, setAlertUsername] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(profile.username === username && password === pwDefault) {
+    if (profile.username === username && password === pwDefault) {
       setCanLogin(true);
     }
 
@@ -27,68 +38,89 @@ const Login = () => {
     }
     if (profile.username === username && password !== pwDefault) {
       setAlertPw('Incorrect Password');
-    } 
+    }
 
-    if(profile.length === 0 && password !== pwDefault) {
+    if (profile.length === 0 && password !== pwDefault) {
       setAlertUsername('Incorrect Username');
       setAlertPw('Incorrect Password');
-      
     }
-  }
+
+    if (username === '' || password === '') {
+      alert('Fill out the Form');
+      return;
+    }
+  };
 
   const handleClick = (id) => {
-    const findProfile = users.find(x => x.username === id);
-    users.map(user => {
-      if(user.username === id) {
+    const findProfile = users.find((x) => x.username === id);
+    users.map((user) => {
+      if (user.username === id) {
         setProfile(findProfile);
       }
-    })
-   
-  }
- 
-  
+      return profile;
+    });
+  };
+
   return (
     <Section className='is-centered login'>
       <Container className='login-wrapper'>
         <Heading className='has-text-centered mb-6 login-title'>
-          Login to your Dashboard
+          Log in to your Dashboard
         </Heading>
         <Columns className='is-centered'>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} id='form'>
             <Form.Field>
-              <Form.Label>Name</Form.Label>
+              <Form.Label htmlFor='username'>Username</Form.Label>
               <Form.Control>
                 <Form.Input
                   placeholder='Username'
-                  name='name'
+                  name='username'
                   value={username}
+                  id='username'
+                  data-testid='username'
                   onChange={(e) => setUsername(e.target.value)}
                 />
                 <Icon align='left'>
                   <BiUserCircle className='icons' />
                 </Icon>
               </Form.Control>
-              <Form.Help color="danger">{alertUsername}</Form.Help>
+              {alertUsername && (
+                <Form.Help color='danger' data-testid='error-user'>
+                  {alertUsername}
+                </Form.Help>
+              )}
             </Form.Field>
             <Form.Field className='mb-5'>
-              <Form.Label>Password</Form.Label>
+              <Form.Label htmlFor='password'>Password</Form.Label>
               <Form.Control>
                 <Form.Input
                   placeholder='Password'
                   name='password'
                   type='password'
+                  id='password'
                   value={password}
+                  data-testid='password'
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <Icon align='left'>
                   <BiLock className='icons' />
                 </Icon>
               </Form.Control>
-              <Form.Help color="danger">{alertPw}</Form.Help>
+              {alertPw && (
+                <Form.Help color='danger' data-testid='error-pw'>
+                  {alertPw}
+                </Form.Help>
+              )}
             </Form.Field>
             <Button.Group>
-              <Button fullwidth rounded color='accent' onClick={() => handleClick(username)} className='login'>
-                Login
+              <Button
+                fullwidth
+                rounded
+                color='accent'
+                onClick={() => handleClick(username)}
+                className='login'
+              >
+                Log in
               </Button>
             </Button.Group>
           </form>

@@ -3,7 +3,7 @@
 
 #root > div > section > div > div > table {
     background-color: $table-background-color;
-    color: $colorPrimary;
+    color:$colorPrimaryDarker;
     font-size:1.3rem;
     width:100%;
     border-collapse: inherit;
@@ -35,7 +35,7 @@
 
 
 #root > div > section > div > div > table > tbody > tr > th {
-    color: $colorPrimary; 
+    color: $colorPrimaryDarker; 
     border: $table-cell-border;
     font-weight: 400;
 }
